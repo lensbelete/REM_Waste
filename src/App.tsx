@@ -1,7 +1,8 @@
-import { SimpleGrid, Skeleton, Center, Text } from '@mantine/core';
+import { SimpleGrid, Skeleton, Center, Text, Container } from '@mantine/core';
 import { WasteCard } from './components/Card';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Header } from './components/Header';
 
 type Skip = {
   id: number;
@@ -41,9 +42,10 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <main className="container mx-auto px-4 py-8">
-        <SimpleGrid cols={{ base: 1, sm: 2, lg: 4 }} spacing="lg">
+    <>
+    <Header/>
+    <Container size="lg" py="xl">
+      <SimpleGrid cols={{ base: 1, sm: 2, lg: 4 }} spacing="lg">
           {loading ? (
             Array.from({ length: 4 }).map((_, idx) => (
               <Skeleton height={320} radius="md" key={idx} />
@@ -62,12 +64,16 @@ function App() {
             ))
           ) : (
             <Center w="100%" py="xl">
-              <Text color="dimmed">No skips available in this area.</Text>
+              <Text c="dimmed">No skips available in this area.</Text>
             </Center>
           )}
         </SimpleGrid>
-      </main>
-    </div>
+
+    </Container>
+     
+
+
+    </>
   );
 }
 

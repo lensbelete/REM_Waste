@@ -1,54 +1,37 @@
-# React + TypeScript + Vite
+# Waste Skips Finder (Redesigned)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a redesigned version of an existing page. I cloned the original page and rebuilt it from scratch using a modern frontend stack to improve performance, responsiveness, and code maintainability.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✅ What I Did
 
-## Expanding the ESLint configuration
+### 🔁 Cloned & Redesigned the Page
+- Took an existing webpage and rebuilt it using **Vite** for faster build and development experience.
+- Reorganized the layout using component-based design with **React**.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 🧱 Used a Modern UI Stack
+- **Mantine** was used for responsive, accessible UI components like cards, containers, loaders, and titles.
+- **Tailwind CSS** was used alongside Mantine to handle layout, spacing, colors, and responsive styling efficiently.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### 🔌 Integrated Dynamic Data with Axios
+- Used **Axios** to fetch skip data from the following API:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Parsed the JSON response and displayed it in a responsive card grid using Mantine.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+### 💡 Built with Developer Experience in Mind
+- Vite enabled hot module replacement and lightning-fast dev builds.
+- Code is structured for scalability: `components/`, `pages/`, and global styles.
+- Used `useEffect` and `useState` for fetching and managing API data.
+
+---
+
+## 🚀 How to Run It
+
+1. Clone the repository:
+
+ ```bash
+ git clone https://github.com/your-username/waste-skips-finder.git
+ cd waste-skips-finder
+
