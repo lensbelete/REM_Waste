@@ -1,0 +1,7 @@
+@layer base, mantine, tailwind;           
+@import '@mantine/core/styles.layer.css'; /* Mantine normalize in the right slot */
+@tailwind base;                            /* Tailwind’s Preflight */
+@tailwind components;                      /* Tailwind’s component styles */
+@tailwind utilities;                       /* Tailwind’s utilities */
+
+/* Optional: your own global overrides below */
