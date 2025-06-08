@@ -52,7 +52,7 @@ export const Header = () => {
         <Burger opened={opened} onClick={toggle} color="black" />
       </div>
 
-      <div className="hidden md:flex flex-wrap justify-center gap-4 md:gap-8 cursor-pointer items-center">
+      <div className="hidden md:flex flex-wrap justify-center gap-2 md:gap-6 cursor-pointer items-center">
         {steps.map((step, index) => (
           <div key={step.step} className="flex items-center">
             <ProgressStep
@@ -62,7 +62,7 @@ export const Header = () => {
               active={step.active}
             />
             {index < steps.length - 1 && (
-              <IconArrowRight size={24} color="black" className="mx-2" />
+              <IconArrowRight size={24} color="black"  className='ml-5'/>
             )}
           </div>
         ))}
