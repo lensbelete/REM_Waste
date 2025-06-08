@@ -15,23 +15,15 @@ This project is a redesigned version of an existing page. I cloned the original 
 - **Tailwind CSS** was used alongside Mantine to handle layout, spacing, colors, and responsive styling efficiently.
 
 ### 🔌 Integrated Dynamic Data with Axios
-- Used **Axios** to fetch skip data from the following API:
+- Used **Axios** to fetch skip data from the following API: https://app.wewantwaste.co.uk/api/skips/by-location?postcode=NR32&area=Lowestoft
 
 
 - Parsed the JSON response and displayed it in a responsive card grid using Mantine.
 
 ### 💡 Built with Developer Experience in Mind
 - Vite enabled hot module replacement and lightning-fast dev builds.
-- Code is structured for scalability: `components/`, `pages/`, and global styles.
+- Code is structured for scalability: `components/` and global styles.
 - Used `useEffect` and `useState` for fetching and managing API data.
 
 ---
-
-## 🚀 How to Run It
-
-1. Clone the repository:
-
- ```bash
- git clone https://github.com/your-username/waste-skips-finder.git
- cd waste-skips-finder
 
